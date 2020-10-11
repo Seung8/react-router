@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { Link, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 
 function Profiles() {
   return (
@@ -8,10 +8,23 @@ function Profiles() {
       <h3>사용자 목록</h3>
       <ul>
         <li>
-          <Link to="/profiles/firstUser">테스터1</Link>
+          {/* 현재 주소와 일치하는 경우 특정 작업(스타일 지정, 클래스 지정 등)을 수행 */}
+          <NavLink
+            to="/profiles/firstUser"
+            activeStyle={{ color: "blue", fontWeight: "bold" }}
+            activeClassName="selected"
+          >
+            테스터1
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/secondUser">테스터2</Link>
+          <NavLink
+            to="/profiles/secondUser"
+            activeStyle={{ color: "blue", fontWeight: "bold" }}
+            activeClassName="selected"
+          >
+            테스터2
+          </NavLink>
         </li>
       </ul>
       <Route
