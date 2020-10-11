@@ -13,8 +13,6 @@ const profileData = {
 
 // Route 컴포넌트에서 path 설정 시 콜론(:) 뒤에 담는 값을 match 파라미터로 할당
 function Profile({ match }) {
-  console.log(`match parameter: ${match}`);
-
   const { username } = match.params;
   const profile = profileData[username];
 
