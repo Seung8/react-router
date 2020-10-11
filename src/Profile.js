@@ -1,4 +1,5 @@
 import React from "react";
+import WithRouterSample from "./WithRouterSample";
 
 const profileData = {
   firstUser: {
@@ -7,7 +8,7 @@ const profileData = {
   },
   secondUser: {
     name: "tester2",
-    desctiprion: "Second tester.",
+    description: "Second tester.",
   },
 };
 
@@ -26,6 +27,7 @@ function Profile({ match }) {
         {username} ({profile.name})
       </h3>
       <p>{profile.description}</p>
+      <WithRouterSample />
     </div>
   );
 }
